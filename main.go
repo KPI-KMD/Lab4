@@ -4,7 +4,7 @@ import (
 	"bufio"
 	"os"
 	"strings"
-	"https://github.com/KPI-KMD/Lab4/tree/main/engine"
+	"github.com/KPI-KMD/Lab4/engine"
 )
 
 func parser(commandLine string) engine.Command{
@@ -41,7 +41,7 @@ func main() {
 	eventLoop := new(engine.EventLoop)
 	eventLoop.Start()
 
-	if input, err := os.Open(inputFile); err == nil {
+	if input, err := os.Open(inputFile.txt); err == nil {
 		defer input.Close()
 		scanner := bufio.NewScanner()
 		for scanner.Scan() {
