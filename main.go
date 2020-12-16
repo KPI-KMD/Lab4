@@ -7,7 +7,7 @@ import (
 	"github.com/KPI-KMD/Lab4/engine"
 )
 
-func parser(commandLine string) engine.Command{
+func parse(commandLine string) engine.Command{
 	parts := strings.Fields(commandLine)
 
 	if len(parts) == 0{
@@ -43,10 +43,10 @@ func main() {
 
 	if input, err := os.Open("inputFile.txt"); err == nil {
 		defer input.Close()
-		scanner := bufio.NewScanner()
+		scanner := bufio.NewScanner(input)
 		for scanner.Scan() {
 			commandLine := scanner.Text()
-			cmd := parser(commandLine) 
+			cmd := parse(commandLine) 
 			Loop.Post(cmd)
 		}
 	} 

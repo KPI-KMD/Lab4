@@ -1,1 +1,10 @@
-print 312
+print
+cat
+print 2
+cat kmd 13
+cat 4 2
+print meow
+cat 3 3 3
+print la la
+cat cat 1
+cat cat 2
