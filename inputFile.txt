@@ -6,5 +6,7 @@ cat 4 2
 print meow
 cat 3 3 3
 print la la
+print $kaktus
+cat cat dog 
 cat cat 1
 cat cat 2
